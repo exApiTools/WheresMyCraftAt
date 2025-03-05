@@ -1,0 +1,224 @@
+[
+  {
+    "AutomaticSuccess": false,
+    "CheckType": 1,
+    "ConditionalGroups": [
+      {
+        "Conditionals": [
+          {
+            "Name": "Area contains Drowning Orbs",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModDrowningOrbs\"))"
+          },
+          {
+            "Name": "When a fifth Impale is inflicted on a Player, Impales are removed to Reflect their Physical Damage multiplied by their remaining Hits to that Player and their Allies within 1.8 metres",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModImpaleDetonation\"))"
+          },
+          {
+            "Name": "Players are Marked for Death for # seconds after killing a Rare or Unique monster",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModMarkedForDeath\"))"
+          },
+          {
+            "Name": "Reduced Flask Charges",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersGainReducedFlaskCharges\"))"
+          },
+          {
+            "Name": "Reduced Extra Damage From Crits",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapMonstersBaseSelfCriticalMultiplier\"))"
+          },
+          {
+            "Name": "Less Global Defense",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModGlobalDefences\"))"
+          },
+          {
+            "Name": "Random as Elemental",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModDamageAsElemental\"))"
+          },
+          {
+            "Name": "Less AoE",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersAoERadius\"))"
+          },
+          {
+            "Name": "Minus Max",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerMaxResists\"))"
+          },
+          {
+            "Name": "Monsters gain #% of their Physical Damage as Extra Chaos Damage",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapMonsterChaosDamage\"))"
+          },
+          {
+            "Name": "Area contains Runes of the Searing Exarch",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModExarch\"))"
+          },
+          {
+            "Name": "Remove Percent On Hit",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModPercentDamage\"))"
+          },
+          {
+            "Name": "Rare Volatiles",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModVolatiles\"))"
+          },
+          {
+            "Name": "Desolation",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModSirusGround\"))"
+          },
+          {
+            "Name": "Block & Armour",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersBlockAndArmour\"))"
+          },
+          {
+            "Name": "Aura Effect",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerAuraEffect\"))"
+          },
+          {
+            "Name": "Buffs Expire",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerBuffsExpireFaster\"))"
+          },
+          {
+            "Name": "Damage Rotation",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModDamageRotation\"))"
+          },
+          {
+            "Name": "Monster Damage Penetrates #% Elemental Resistances",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModEleDamagePenetration\"))"
+          },
+          {
+            "Name": "Cannot Regen / Less Regen",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerReducedRegen\"))"
+          }
+        ],
+        "ConditionalsToBePassForSuccess": 1,
+        "GroupType": 2
+      },
+      {
+        "Conditionals": [
+          {
+            "Name": "Pack Size Above 50",
+            "Value": "MapInfo.PackSize >= 50"
+          },
+          {
+            "Name": "Rarity Above 100",
+            "Value": "MapInfo.Rarity >= 100"
+          }
+        ],
+        "ConditionalsToBePassForSuccess": 2,
+        "GroupType": 0
+      }
+    ],
+    "CurrencyItem": "",
+    "FailureAction": 2,
+    "FailureActionStepIndex": 1,
+    "SuccessAction": 1,
+    "SuccessActionStepIndex": 1
+  },
+  {
+    "AutomaticSuccess": false,
+    "CheckType": 0,
+    "ConditionalGroups": [
+      {
+        "Conditionals": [
+          {
+            "Name": "Area contains Drowning Orbs",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModDrowningOrbs\"))"
+          },
+          {
+            "Name": "When a fifth Impale is inflicted on a Player, Impales are removed to Reflect their Physical Damage multiplied by their remaining Hits to that Player and their Allies within 1.8 metres",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModImpaleDetonation\"))"
+          },
+          {
+            "Name": "Players are Marked for Death for # seconds after killing a Rare or Unique monster",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModMarkedForDeath\"))"
+          },
+          {
+            "Name": "Reduced Flask Charges",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersGainReducedFlaskCharges\"))"
+          },
+          {
+            "Name": "Reduced Extra Damage From Crits",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapMonstersBaseSelfCriticalMultiplier\"))"
+          },
+          {
+            "Name": "Less Global Defense",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModGlobalDefences\"))"
+          },
+          {
+            "Name": "Random as Elemental",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModDamageAsElemental\"))"
+          },
+          {
+            "Name": "Less AoE",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersAoERadius\"))"
+          },
+          {
+            "Name": "Minus Max",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerMaxResists\"))"
+          },
+          {
+            "Name": "Monsters gain #% of their Physical Damage as Extra Chaos Damage",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapMonsterChaosDamage\"))"
+          },
+          {
+            "Name": "Area contains Runes of the Searing Exarch",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModExarch\"))"
+          },
+          {
+            "Name": "Remove Percent On Hit",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModPercentDamage\"))"
+          },
+          {
+            "Name": "Rare Volatiles",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapUberModVolatiles\"))"
+          },
+          {
+            "Name": "Desolation",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModSirusGround\"))"
+          },
+          {
+            "Name": "Block & Armour",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayersBlockAndArmour\"))"
+          },
+          {
+            "Name": "Aura Effect",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerAuraEffect\"))"
+          },
+          {
+            "Name": "Buffs Expire",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerBuffsExpireFaster\"))"
+          },
+          {
+            "Name": "Damage Rotation",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModDamageRotation\"))"
+          },
+          {
+            "Name": "Monster Damage Penetrates #% Elemental Resistances",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.RawName.Contains(\"MapUberModEleDamagePenetration\"))"
+          },
+          {
+            "Name": "Cannot Regen / Less Regen",
+            "Value": "ModsInfo.ExplicitMods.Any(x => x.Group.Contains(\"MapPlayerReducedRegen\"))"
+          }
+        ],
+        "ConditionalsToBePassForSuccess": 1,
+        "GroupType": 2
+      },
+      {
+        "Conditionals": [
+          {
+            "Name": "Pack Size Above 50",
+            "Value": "MapInfo.PackSize >= 50"
+          },
+          {
+            "Name": "Rarity Above 100",
+            "Value": "MapInfo.Rarity >= 100"
+          }
+        ],
+        "ConditionalsToBePassForSuccess": 2,
+        "GroupType": 0
+      }
+    ],
+    "CurrencyItem": "Chaos Orb",
+    "FailureAction": 0,
+    "FailureActionStepIndex": 1,
+    "SuccessAction": 1,
+    "SuccessActionStepIndex": 2
+  }
+]
