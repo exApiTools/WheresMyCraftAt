@@ -17,7 +17,7 @@
           },
           {
             "Name": "More Scarabs OR More Currency",
-            "Value": "MapsInfo.MoreScarabs >= 50 || MapsInfo.MoreScarabs >= 50"
+            "Value": "MapInfo.MoreScarabs >= 50 || MapInfo.MoreScarabs >= 50"
           }
         ]
       }
@@ -42,7 +42,7 @@
           },
           {
             "Name": "More Scarabs OR More Currency",
-            "Value": "MapsInfo.MoreScarabs >= 50 || MapsInfo.MoreScarabs >= 50"
+            "Value": "MapInfo.MoreScarabs >= 50 || MapInfo.MoreScarabs >= 50"
           }
         ]
       }
