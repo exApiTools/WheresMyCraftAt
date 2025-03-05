@@ -12,12 +12,12 @@
           "ConditionalsToBePassForSuccess": 1,
           "Conditionals": [
             {
-              "Name": "Grand Design",
-              "Value": "GetItemStats(ModsInfo.ExplicitMods)[AfflictionNotableRemarkable]"
+              "Name": "Remarkable",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableRemarkable] >= 1"
             },
             {
-              "Name": "Remarkable",
-              "Value": "GetItemStats(ModsInfo.ExplicitMods)[AfflictionNotableGrandDesign]"
+              "Name": "Grand Design",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableGrandDesign] >= 1"
             }
           ]
         }
