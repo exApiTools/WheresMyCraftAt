@@ -1,0 +1,118 @@
+[
+    {
+      "CurrencyItem": "Orb of Alteration",
+      "AutomaticSuccess": false,
+      "SuccessAction": 2,
+      "SuccessActionStepIndex": 5,
+      "FailureAction": 2,
+      "FailureActionStepIndex": 1,
+      "ConditionalGroups": [
+        {
+          "GroupType": 0,
+          "ConditionalsToBePassForSuccess": 1,
+          "Conditionals": [
+            {
+              "Name": "Remarkable",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableRemarkable] >= 1"
+            },
+            {
+              "Name": "Grand Design",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableGrandDesign] >= 1"
+            }
+          ]
+        }
+      ],
+      "CheckType": 0
+    },
+    {
+      "CurrencyItem": "",
+      "AutomaticSuccess": false,
+      "SuccessAction": 0,
+      "SuccessActionStepIndex": 1,
+      "FailureAction": 1,
+      "FailureActionStepIndex": 1,
+      "ConditionalGroups": [
+        {
+          "GroupType": 0,
+          "ConditionalsToBePassForSuccess": 1,
+          "Conditionals": [
+            {
+              "Name": "Remarkable",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableRemarkable] >= 1"
+            },
+            {
+              "Name": "Grand Design",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableGrandDesign] >= 1"
+            }
+          ]
+        }
+      ],
+      "CheckType": 1
+    },
+    {
+      "CurrencyItem": "Orb of Augmentation",
+      "AutomaticSuccess": false,
+      "SuccessAction": 2,
+      "SuccessActionStepIndex": 5,
+      "FailureAction": 2,
+      "FailureActionStepIndex": 0,
+      "ConditionalGroups": [
+        {
+          "GroupType": 0,
+          "ConditionalsToBePassForSuccess": 1,
+          "Conditionals": [
+            {
+              "Name": "Open Prefix",
+              "Value": "ModsInfo.Prefixes.Count == 0"
+            }
+          ]
+        }
+      ],
+      "CheckType": 0
+    },
+    {
+      "CurrencyItem": "Orb of Scouring",
+      "AutomaticSuccess": true,
+      "SuccessAction": 0,
+      "SuccessActionStepIndex": 1,
+      "FailureAction": 1,
+      "FailureActionStepIndex": 1,
+      "ConditionalGroups": [],
+      "CheckType": 0
+    },
+    {
+      "CurrencyItem": "Orb of Transmutation",
+      "AutomaticSuccess": true,
+      "SuccessAction": 2,
+      "SuccessActionStepIndex": 0,
+      "FailureAction": 1,
+      "FailureActionStepIndex": 1,
+      "ConditionalGroups": [],
+      "CheckType": 0
+    },
+    {
+      "CurrencyItem": "Regal Orb",
+      "AutomaticSuccess": false,
+      "SuccessAction": 1,
+      "SuccessActionStepIndex": 1,
+      "FailureAction": 2,
+      "FailureActionStepIndex": 3,
+      "ConditionalGroups": [
+        {
+          "GroupType": 0,
+          "ConditionalsToBePassForSuccess": 2,
+          "Conditionals": [
+            {
+              "Name": "Remarkable",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableRemarkable] >= 1"
+            },
+            {
+              "Name": "Grand Design",
+              "Value": "ItemStats[GameStat.LocalAfflictionNotableGrandDesign] >= 1"
+            }
+          ]
+        }
+      ],
+      "CheckType": 0
+    }
+]
