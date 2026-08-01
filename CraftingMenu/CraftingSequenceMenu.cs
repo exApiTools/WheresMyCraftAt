@@ -281,7 +281,7 @@ public static class CraftingSequenceMenu
         var currencyItem = step.CurrencyItem;
         var availableWidth = ImGui.GetContentRegionAvail().X * 0.75f;
         ImGui.SetNextItemWidth(availableWidth);
-        if (ImGui.InputTextWithHint("Currency Item", "Case Sensitive Currency BaseName \"Orb of Transmutation\"...", ref currencyItem, 100_000))
+        if (ImGui.InputTextWithHint("Currency Item", "Case Sensitive Currency BaseName \"Orb of Transmutation\"...", ref currencyItem, 2_000))
             step.CurrencyItem = currencyItem;
 
         var autoSuccess = step.AutomaticSuccess;
@@ -383,7 +383,7 @@ public static class CraftingSequenceMenu
         {
             using (new ErrorStyling())
             {
-                if (ImGui.InputTextWithHint("##conditionName", "Branch Name", ref branchName, 100_000))
+                if (ImGui.InputTextWithHint("##conditionName", "Branch Name", ref branchName, 2_000))
                     step.Branches[branchIndex].ConditionalGroups[0].Conditionals[0].Name = branchName;
             }
 
@@ -396,7 +396,7 @@ public static class CraftingSequenceMenu
         }
         else
         {
-            if (ImGui.InputTextWithHint("##conditionName", "Branch Name", ref branchName, 100_000))
+            if (ImGui.InputTextWithHint("##conditionName", "Branch Name", ref branchName, 2_000))
                 step.Branches[branchIndex].ConditionalGroups[0].Conditionals[0].Name = branchName;
         }
 
@@ -640,7 +640,7 @@ public static class CraftingSequenceMenu
                 {
                     var availableWidth = ImGui.GetContentRegionAvail().X * 0.75f;
                     ImGui.SetNextItemWidth(availableWidth);
-                    if (ImGui.InputTextWithHint("##conditionName", "Name of condition...", ref checkKey, 100_000))
+                    if (ImGui.InputTextWithHint("##conditionName", "Name of condition...", ref checkKey, 2_000))
                         step.ConditionalGroups[groupIndex].Conditionals[conditionalIndex].Name = checkKey;
                 }
 
@@ -655,7 +655,7 @@ public static class CraftingSequenceMenu
             {
                 var availableWidth = ImGui.GetContentRegionAvail().X * 0.75f;
                 ImGui.SetNextItemWidth(availableWidth);
-                if (ImGui.InputTextWithHint("##conditionName", "Name of condition...", ref checkKey, 100_000))
+                if (ImGui.InputTextWithHint("##conditionName", "Name of condition...", ref checkKey, 2_000))
                     step.ConditionalGroups[groupIndex].Conditionals[conditionalIndex].Name = checkKey;
             }
 
@@ -1233,7 +1233,7 @@ public static class CraftingSequenceMenu
             return;
 
         ImGui.Indent();
-        ImGui.InputTextWithHint("##SaveAs", "File Path...", ref _fileSaveName, 100_000);
+        ImGui.InputTextWithHint("##SaveAs", "File Path...", ref _fileSaveName, 2_000);
         ImGui.SameLine();
 
         if (ImGui.Button("Save To File"))
@@ -1342,7 +1342,7 @@ public static class CraftingSequenceMenu
             LoadCoEDataData();
         }
 
-        ImGui.InputTextWithHint("##CoEImport", "Craft of Exile Export String..", ref _coeImportData, 10_000_000);
+        ImGui.InputTextWithHint("##CoEImport", "Craft of Exile Export String..", ref _coeImportData, 500_000);
         ImGui.SameLine();
         if (ImGui.Button("Import CoE Data"))
         {
