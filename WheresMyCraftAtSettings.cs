@@ -54,6 +54,18 @@ public class RunOptions
     public CustomNode InventorySectionSelector { get; }
     public int[,] InventoryCraftingSlots { get; set; } = new int[5, 12];
 
+    // The filter highlight used to be evaluated per slot per frame, which rebuilds an
+    // ItemData for every item every frame (~1.4ms each, ~84ms/frame with a full bag).
+    // Cache the matches and refresh at most every 200ms, or when the query text changes.
+    [JsonIgnore]
+    private readonly bool[,] _filterMatchCache = new bool[5, 12];
+
+    [JsonIgnore]
+    private readonly System.Diagnostics.Stopwatch _filterCacheAge = System.Diagnostics.Stopwatch.StartNew();
+
+    [JsonIgnore]
+    private string _filterCacheKey = null;
+
     public RunOptions(StylingDooDads Styling)
     {
         ToggleAll.OnPressed = () =>
@@ -109,7 +121,26 @@ public class RunOptions
                         filter = new ItemFilter([query]);
                     }
                 }
-            
+
+                var cacheKey = ApplyFilter ? InventoryFilter.Value ?? "" : null;
+                if (_filterCacheKey != cacheKey || _filterCacheAge.ElapsedMilliseconds > 200)
+                {
+                    _filterCacheKey = cacheKey;
+                    _filterCacheAge.Restart();
+                    Array.Clear(_filterMatchCache, 0, _filterMatchCache.Length);
+
+                    if (filter != null)
+                    {
+                        foreach (var invItem in itemsInInventory)
+                        {
+                            if (invItem.PosX is >= 0 and < 12 && invItem.PosY is >= 0 and < 5)
+                            {
+                                _filterMatchCache[invItem.PosY, invItem.PosX] =
+                                    FilterHandler.IsItemMatchingCondition(invItem.Item, filter);
+                            }
+                        }
+                    }
+                }
 
                 var numb = 1;
                 ImGui.PushStyleVar(ImGuiStyleVar.ItemSpacing, new Vector2(1, 1));
@@ -122,10 +153,7 @@ public class RunOptions
                         var isValidItemInSlot = itemsInInventory.Any(item => item.PosX == col && item.PosY == row);
                         if (isValidItemInSlot && Styling.CustomMenuStyling)
                         {
-                            var isFiltered = ApplyFilter &&
-                                             filter != null &&
-                                             InventoryHandler.TryGetInventoryItemFromSlot(new Vector2(col, row), out var item) &&
-                                             FilterHandler.IsItemMatchingCondition(item.Item, filter);
+                            var isFiltered = ApplyFilter && _filterMatchCache[row, col];
                             ImGui.PushStyleColor(ImGuiCol.FrameBg,
                                 isFiltered ? Styling.InventoryVisualizer.Filtered.Value.ToImgui() : Styling.InventoryVisualizer.BackgroundNormal.Value.ToImgui());
                             ImGui.PushStyleColor(ImGuiCol.FrameBgHovered, Styling.InventoryVisualizer.BackgroundHovered.Value.ToImgui());
