@@ -110,7 +110,7 @@ public static class Logging
                 }
             }
 
-            ImGui.BeginChild("LogMessages", new Vector2(0, 0), ImGuiChildFlags.Border, ImGuiWindowFlags.AlwaysHorizontalScrollbar | ImGuiWindowFlags.AlwaysVerticalScrollbar);
+            ImGui.BeginChild("LogMessages", new Vector2(0, 0), ImGuiChildFlags.Borders, ImGuiWindowFlags.AlwaysHorizontalScrollbar | ImGuiWindowFlags.AlwaysVerticalScrollbar);
 
             lock (Locker)
             {

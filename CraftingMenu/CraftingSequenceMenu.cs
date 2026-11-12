@@ -163,7 +163,7 @@ public static class CraftingSequenceMenu
 
         if (ImGui.CollapsingHeader(headerText, ImGuiTreeNodeFlags.DefaultOpen))
         {
-            ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Border | ImGuiChildFlags.AutoResizeY);
+            ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Borders | ImGuiChildFlags.AutoResizeY);
             ImGui.Indent();
 
             DrawMethodTypeSection(currentStep);
@@ -241,7 +241,7 @@ public static class CraftingSequenceMenu
 
         using (new ColorBackground((ImGuiCol.ChildBg, Main.Settings.Styling.BranchGroup.Background.Value)))
         {
-            ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Border | ImGuiChildFlags.AutoResizeY);
+            ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Borders | ImGuiChildFlags.AutoResizeY);
             ImGui.Indent();
             for (var branchIndex = 0; branchIndex < currentStep.Branches.Count; branchIndex++)
             {
@@ -530,7 +530,7 @@ public static class CraftingSequenceMenu
 
             using (new ColorBackground((ImGuiCol.ChildBg, bgColor)))
             {
-                ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Border | ImGuiChildFlags.AutoResizeY);
+                ImGui.BeginChild("ConditionalGroup", Vector2.Zero, ImGuiChildFlags.Borders | ImGuiChildFlags.AutoResizeY);
 
                 var removeGroup = DrawConditionalGroupHeader(step, groupIndex);
                 if (removeGroup)
@@ -1155,7 +1155,7 @@ public static class CraftingSequenceMenu
     private static void CreateStepChildWindow(CraftingStepInput currentStep, int index, string title)
     {
         ImGui.PushID(index);
-        ImGui.BeginChild($"[{index + 1}] {title}", Vector2.Zero, ImGuiChildFlags.AutoResizeY | ImGuiChildFlags.Border);
+        ImGui.BeginChild($"[{index + 1}] {title}", Vector2.Zero, ImGuiChildFlags.AutoResizeY | ImGuiChildFlags.Borders);
         ImGui.Text($"[{index + 1}] {title}");
         ImGui.Indent();
         if (title.StartsWith("Use") && !currentStep.AutomaticSuccess)
