@@ -281,7 +281,7 @@ public static class CraftingSequenceMenu
         var currencyItem = step.CurrencyItem;
         var availableWidth = ImGui.GetContentRegionAvail().X * 0.75f;
         ImGui.SetNextItemWidth(availableWidth);
-        if (ImGui.InputTextWithHint("Currency Item", "Case Sensitive Currency BaseName \"Orb of Transmutation\"...", ref currencyItem, 100_000))
+        if (ImGui.InputTextWithHint("Currency Item", "Currency BaseName e.g. \"Orb of Transmutation\"...", ref currencyItem, 100_000))
             step.CurrencyItem = currencyItem;
 
         var autoSuccess = step.AutomaticSuccess;
