@@ -1146,6 +1146,7 @@ public static class CraftingSequenceMenu
 
             ImGui.Unindent();
             ImGui.EndChild();
+            ImGui.PopID();
             ImGui.NewLine();
         }
 
@@ -1160,8 +1161,6 @@ public static class CraftingSequenceMenu
         ImGui.Indent();
         if (title.StartsWith("Use") && !currentStep.AutomaticSuccess)
             ImGui.Text("Check the item");
-
-        ImGui.PopID();
     }
 
     private static void HandleAutomaticSuccess(CraftingStepInput currentStep)
